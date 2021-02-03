@@ -1,0 +1,16 @@
+version: '3'
+volumes:
+  postgresdata:
+services:
+  postgres:
+    image: postgres
+    restart: always
+    volumes:
+      - ./docker/postgres-init:/docker-entrypoint-initdb.d
+      - postgresdata:/var/lib/postgresql/data
+      - ./docker/backup:/var/backup
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    #  - POSTGRES_DB=${POSTGRES_DATABASE}

@@ -1,0 +1,139 @@
+{
+  "request": {
+    "id": "test31",
+    "imp": [
+      {
+        "id": "y02i9l7bgi_test_1",
+        "native": {
+          "assets": [
+            {
+              "templateid": 1,
+              "w": 640,
+              "h": 360
+            }
+          ]
+        },
+        "bidfloor": 1,
+        "bidfloorcur": "USD",
+        "adtype": 31,
+        "bpkgname": [
+          "com.velldrin.smartvoiceassistant",
+          "com.sairi.xiaorui",
+          "site.yingzi.mytools"
+        ],
+        "cur": [
+          "USD"
+        ],
+        "maxCount": 1,
+        "trafficDistributeMode": 1
+      }
+    ],
+    "app": {
+      "name": "HUAWEI Assistant∙TODAY",
+      "bundle": "com.android.mediacenter",
+      "ver": "21.0.9.303"
+    },
+    "device": {
+      "ua": "Mozilla/5.0 (Linux; Android 10; EML-L09 Build/HUAWEIEML-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/85.0.4183.81 Mobile Safari/537.36",
+      "lmt": "1",
+      "ip": "192.168.1.1",
+      "devicetype": 4,
+      "make": "HUAWEI",
+      "model": "EML-L09",
+      "os": "android",
+      "osv": "10",
+      "h": 2244,
+      "w": 1080,
+      "ppi": 480,
+      "pxratio": 3,
+      "language": "it",
+      "connectiontype": 6
+    },
+    "at": 2,
+    "tmax": 500,
+    "wlang": [
+      "fr"
+    ],
+    "wlocalecountry": [
+      "FR"
+    ]
+  },
+  "response": {
+    "id": "test31",
+    "seatbid": [
+      {
+        "bid": [
+          {
+            "id": "y02i9l7bgi_test_1",
+            "impid": "y02i9l7bgi_test_1",
+            "price": 4,
+            "cid": "6672506572736f6e6c696765206cc3a56e206572206e75207",
+            "crid": "6672506572736f6e6c696765206cc3a56e206572206e75207",
+            "cur": "USD",
+            "lurl": "http://localhost:8004/huawei/failreason?id=test31&reason=${AUCTION_LOSS}&partner=outbrain&country=FR&bundle=com.android.mediacenter",
+            "nativersp": {
+              "templateid": 1,
+              "title": "Personlige lån er nu tilgængelige online i Copenhagen",
+              "brand": "Lendo Bank",
+              "images": [
+                {
+                  "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6ImFjODFkZDM1OWU0OTg2NjkyMGQ1NDExZTM5NDI4MWNjOTc4YWZkZjM1ZWJjY2U3OGIxOTM5NGI5NDViMzE4NzUiLCJ3IjoxMDgwLCJoIjo2MDcsImQiOjEuMCwiY3MiOjAsImYiOjB9.jpg",
+                  "w": 1080,
+                  "h": 607,
+                  "mime": "image/jpg"
+                }
+              ],
+              "imptrackers": [
+                "https://log.outbrainimg.com/loggerServices/widgetGlobalEvent?rId=22bd87e44cf9dfb6125b14ae627a83f3&pvId=22bd87e44cf9dfb6125b14ae627a83f3&sid=7847126&pid=46529&idx=0&wId=140&pad=1&org=0&tm=0&eT=3",
+                "https://log.outbrainimg.com/loggerServices/widgetGlobalEvent?rId=22bd87e44cf9dfb6125b14ae627a83f3&pvId=22bd87e44cf9dfb6125b14ae627a83f3&sid=7847126&pid=46529&idx=0&wId=140&pad=1&org=0&tm=0&eT=0",
+                "https://ads.squidapp.co/log/imp?id=test31"
+              ],
+              "expiretime": 1611755555000,
+              "link": {
+                "interactiontype": 1,
+                "url": "https://paid.outbrain.com/network/redir?p=F7BDMzYow8xQK7qOMd86sJtshQ0tZg9hc-i_c_au3uO5VdL730r9ljW09WE8joDjxd6iINASmzs_bzdVIKuaNUn-PKnadr3LJLV7yaBrjCm2LZYiJdJpju23Ek2CjTvMDI7KMgFq4G6OddXOWQFtSuBbrTHANtxIRiJ011quuTlHr_fA8dg2CtQdkKJVpZH7cAd8zUEq2mMEmhHMLcyVw7Jr-KHJpn0jqLRz6hXwMP8tNetbZCDWZYeXGgDMIC_y0D7T5q7tjzIADUb3R-n18fd3mhDONEfKyBTtX637gY-FnosS0ghcdnvkfZEichKVJWBsuaR-1WpaycE9ubUJC91sqJ3FIYgg_mOWp8YMYatORwvyQJMWzDNsEk_WQn8twmjVzcKh1UWiJGROSPazzqqz-u9Oo_sBVqGpCYznYWHdKpLkRom8VEl3R6s0I8uHnMPnEJoAEi7NenolplToIw5EbYm0b2AxVIL_6lJTdh1djOayng8Kmk1Gu6flO0Lu87g6voMn9DWDVsxuibLPTv2sUs9jrOowebDnyakKUkugb2-IUL9HBQy98VrGKoIMw9LEAhMbiQ-2GDeDywqRSMOZJodh3EE-8YB1_N0NVXKGLi8vQTR9OuaK8nZybuNVY1854hknQKA6ASnV4dnDugE02ze4HpggKDeMEmtXXHRHBCbitIPwatfAsZCwWNPgbk1JxO8E5xyOPL7t4qzKfSa6cQ9A-t8EHjqPPkYz7mWMBgi7YTdwqnxNNyaASHB0sJ4Rw4i89OMSF08o1H9HCObsLPVg6vSqGgTmDk24ASi6frcKMFMdV4YIoy9zNp5BjJ3q2maz1X-H2NcAfnGk_CFLHz-IwDNek6vUCo-OfLqzOvCtxey9EfYS79bZm8iaPZIIEU_shpJ1V6AwMlTGbY16REucrw_7BmMVCKLoEI2XsezebOPHBwOVwjwLzmQhUfMA8erosHpBr3M_p4ObMVPDzUh3wVa3UWUaiu26yoknBAR80c4CWo5QcYb0rTgGyCg-E1AC3dh2CPDc8y3cAvGxKqJgLhQMTNhOKDO68nxu83HivI_Sxnp72-GHfbSUeTktHn_ny5UqT1scAWEhKSrdJJUynvCk9TPgD0h-ao1NG4O2ZL6jF2QmVQ-IyhTtcqCwM051xZXT5ZnR_ArsGw&c=9ef5afda&v=3",
+                "clicktrackers": [
+                  "https://ads.squidapp.co/log/click?id=test31"
+                ]
+              }
+            },
+            "cat": [
+              "IAB12"
+            ],
+            "language": "fr"
+          }
+        ],
+        "seat": "1234"
+      }
+    ]
+  },
+  "ip": "192.168.1.1",
+  "provider": "outbrain",
+  "general_provider": "outbrain",
+  "backfill": 1,
+  "request_at": "2021-01-25T17:52:34.8963718+04:00",
+  "response_at": "2021-01-25T17:52:35.0953777+04:00",
+  "response_time": 199.0059,
+  "added_at": "2021-01-25T17:52:35.0953777+04:00",
+  "fallback_reason": "",
+  "events": [
+    {
+      "message": "Request outbrain",
+      "created_at": "2021-01-25T17:52:34.898373+04:00",
+      "error_trail": null,
+      "data": {
+        "Body": "",
+        "Header": "GET /utils/platforms?api_user_id=&bundleUrl=https%3A%2F%2Fappgallery.cloud.huawei.com%2Fag%2Fn%2Fapp%2FC10021449&format=vjnc&idx=0&installationType=server-side-api&key=SQUID30LGO3J97PPELLFL6BP9&lang=fr&testMode=true&va=true&widgetJSID=APP_1 HTTP/1.1\r\nHost: odb.outbrain.com\r\nUser-Agent: Mozilla/5.0 (Linux; Android 10; EML-L09 Build/HUAWEIEML-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/85.0.4183.81 Mobile Safari/537.36\r\nContent-Type: application/json\r\nX-Forwarded-For: 192.168.1.1\r\nAccept-Encoding: gzip"
+      }
+    },
+    {
+      "message": "Response outbrain",
+      "created_at": "2021-01-25T17:52:35.0953777+04:00",
+      "error_trail": null,
+      "data": {
+        "Body": "{\"response\":{\"exec_time\":22,\"timestamp\":1611582755098,\"status\":{\"id\":0,\"content\":\"Request succeeded\"},\"request\":{\"lang\":\"fr\",\"idx\":\"0\",\"lastIdx\":\"9999\",\"lastCardIdx\":\"9999\",\"did\":\"3274001479\",\"pid\":\"46529\",\"lsd\":\"d7dd2f9d-2cd2-405d-9442-4a75aed2cfc1\",\"enu\":\"qYQeoe5nNRcWXKEiz2COSrEjEU-GscIMrQlBq-eVLfolmV4gDpqO98v-B9xXsxJE\",\"just_created_uuid\":\"true\",\"country\":\"DK\",\"t\":\"MjJiZDg3ZTQ0Y2Y5ZGZiNjEyNWIxNGFlNjI3YTgzZjM=\",\"pvId\":\"22bd87e44cf9dfb6125b14ae627a83f3\",\"pad\":\"1\",\"org\":\"0\",\"abTestVal\":\"no_abtest\",\"obRecsAbtestAndVars\":\"850-2623,822-2522,792-2427,841-2598,699-2184,811-2474,844-2632\",\"widgetJsId\":\"APP_1\",\"readerPlatform\":\"mobile\",\"app_id\":\"C10021449\",\"rtbTest\":\"false\",\"rtbBidTestMode\":\"false\",\"rtbTestRecsNum\":\"0\",\"amplifyEnabled\":\"true\",\"gdpr\":\"1\",\"pcer\":\"p=MkEiiC_gUW1P65SmbAOvu3zSTTK0LXS7neJ36dH-m6g&c=cb20b18c&v=3\",\"sid\":7847126,\"wnid\":140,\"req_id\":\"22bd87e44cf9dfb6125b14ae627a83f3\",\"gl\":\"gOmNIXORBq2KrvMfFfKxdg\",\"vid\":0,\"ref\":0},\"documents\":{\"total_count\":1,\"count\":1,\"doc\":[{\"on-viewed\":[\"https://log.outbrainimg.com/loggerServices/log-viewability?requestId=22bd87e44cf9dfb6125b14ae627a83f3&position=0\"],\"source_name\":\"Lendo Bank\",\"same_source\":\"false\",\"source_display_name\":\"Lendo Bank\",\"pc_id\":181430278,\"adv_name\":\"Fireball Labs GmbH\",\"publish_date\":\"1969-12-31 19:00\",\"orig_url\":\"http://rhdeb.com/cid/95b6f658-d150-4981-9ec4-1e783f700b0a?sectionname=$section_name$&title=Personlige+l%C3%A5n+er+nu+tilg%C3%A6ngelige+online+i+%24%7Bcity%7D%24&timestamp=$time_stamp$&publisherid=$publisher_id$&sectionid=$section_id$&adid=00d5d4fac58ca7389f74ff8a1ee807cbe5&publishername=$publisher_name$&promotedlinkid=00d5d4fac58ca7389f74ff8a1ee807cbe5&idfa=$idfa$&campaignid=00f598c94b54b3adc9d0a15d8945a11520&clickid=$ob_click_id$&androidid=$android_id$\",\"ads_type\":1,\"rec_en_did\":\"Rc9SlpaNNRd9Vv06DOrn5A\",\"url\":\"https://paid.outbrain.com/network/redir?p=F7BDMzYow8xQK7qOMd86sJtshQ0tZg9hc-i_c_au3uO5VdL730r9ljW09WE8joDjxd6iINASmzs_bzdVIKuaNUn-PKnadr3LJLV7yaBrjCm2LZYiJdJpju23Ek2CjTvMDI7KMgFq4G6OddXOWQFtSuBbrTHANtxIRiJ011quuTlHr_fA8dg2CtQdkKJVpZH7cAd8zUEq2mMEmhHMLcyVw7Jr-KHJpn0jqLRz6hXwMP8tNetbZCDWZYeXGgDMIC_y0D7T5q7tjzIADUb3R-n18fd3mhDONEfKyBTtX637gY-FnosS0ghcdnvkfZEichKVJWBsuaR-1WpaycE9ubUJC91sqJ3FIYgg_mOWp8YMYatORwvyQJMWzDNsEk_WQn8twmjVzcKh1UWiJGROSPazzqqz-u9Oo_sBVqGpCYznYWHdKpLkRom8VEl3R6s0I8uHnMPnEJoAEi7NenolplToIw5EbYm0b2AxVIL_6lJTdh1djOayng8Kmk1Gu6flO0Lu87g6voMn9DWDVsxuibLPTv2sUs9jrOowebDnyakKUkugb2-IUL9HBQy98VrGKoIMw9LEAhMbiQ-2GDeDywqRSMOZJodh3EE-8YB1_N0NVXKGLi8vQTR9OuaK8nZybuNVY1854hknQKA6ASnV4dnDugE02ze4HpggKDeMEmtXXHRHBCbitIPwatfAsZCwWNPgbk1JxO8E5xyOPL7t4qzKfSa6cQ9A-t8EHjqPPkYz7mWMBgi7YTdwqnxNNyaASHB0sJ4Rw4i89OMSF08o1H9HCObsLPVg6vSqGgTmDk24ASi6frcKMFMdV4YIoy9zNp5BjJ3q2maz1X-H2NcAfnGk_CFLHz-IwDNek6vUCo-OfLqzOvCtxey9EfYS79bZm8iaPZIIEU_shpJ1V6AwMlTGbY16REucrw_7BmMVCKLoEI2XsezebOPHBwOVwjwLzmQhUfMA8erosHpBr3M_p4ObMVPDzUh3wVa3UWUaiu26yoknBAR80c4CWo5QcYb0rTgGyCg-E1AC3dh2CPDc8y3cAvGxKqJgLhQMTNhOKDO68nxu83HivI_Sxnp72-GHfbSUeTktHn_ny5UqT1scAWEhKSrdJJUynvCk9TPgD0h-ao1NG4O2ZL6jF2QmVQ-IyhTtcqCwM051xZXT5ZnR_ArsGw&c=9ef5afda&v=3\",\"author\":\"\",\"content\":\"Personlige l\\u00E5n er nu tilg\\u00E6ngelige online i Copenhagen\",\"pc_cmp_id\":1013503170,\"pos\":\"0\",\"ttid\":3,\"advId\":\"77652\",\"creativeFormat\":\"Standard\",\"recLang\":\"da\",\"thumbnail\":{\"url\":\"https://images.outbrainimg.com/transform/v3/eyJpdSI6ImFjODFkZDM1OWU0OTg2NjkyMGQ1NDExZTM5NDI4MWNjOTc4YWZkZjM1ZWJjY2U3OGIxOTM5NGI5NDViMzE4NzUiLCJ3IjoxMDgwLCJoIjo2MDcsImQiOjEuMCwiY3MiOjAsImYiOjB9.jpg\",\"width\":1080,\"height\":607,\"imageImpressionType\":\"DOCUMENT_IMAGE\"}}]},\"features\":{\"nextFeedURL\":{\"url\":\"https://feed.outbrain.com/get?bundleUrl=https%3A%2F%2Fappgallery.cloud.huawei.com%2Fag%2Fn%2Fapp%2FC10021449&installationType=server-side-api&widgetJSID=APP_1&testMode=true&format=vjnc&va=true&idx=1&lang=fr&key=SQUID30LGO3J97PPELLFL6BP9&api_user_id=&t=MjJiZDg3ZTQ0Y2Y5ZGZiNjEyNWIxNGFlNjI3YTgzZjM=\"}},\"settings\":{\"flagPublisherZappingFeature\":true,\"recsRequestType\":\"doc_recs\",\"recMode\":\"odb_jsonData\",\"globalWidgetStatistics\":true,\"apv\":true,\"DPR\":\"1.0\",\"listingsViewability\":true,\"ImpressionTrackersSupported\":\"false\",\"ImpressionPixelsSupported\":\"true\",\"InstallationType\":\"server-side-api\",\"PlatformActivityType\":\"Mediator\"},\"viewability_actions\":{\"reportServed\":\"https://log.outbrainimg.com/loggerServices/widgetGlobalEvent?rId=22bd87e44cf9dfb6125b14ae627a83f3&pvId=22bd87e44cf9dfb6125b14ae627a83f3&sid=7847126&pid=46529&idx=0&wId=140&pad=1&org=0&tm=0&eT=0\",\"reportViewed\":\"https://log.outbrainimg.com/loggerServices/widgetGlobalEvent?rId=22bd87e44cf9dfb6125b14ae627a83f3&pvId=22bd87e44cf9dfb6125b14ae627a83f3&sid=7847126&pid=46529&idx=0&wId=140&pad=1&org=0&tm=0&eT=3\"}}}",
+        "Header": "HTTP/2.0 200 OK\r\nAccept-Ranges: bytes\r\nBackend-Ip: 157.52.117.48\r\nCache-Control: no-cache\r\nContent-Type: application/json; charset=UTF-8\r\nDate: Mon, 25 Jan 2021 13:52:35 GMT\r\nExpires: Thu, 01 Jan 1970 00:00:00 GMT\r\nP3p: policyref=\"http://www.outbrain.com/w3c/p3p.xml\",CP=\"NOI NID CURa DEVa TAIa PSAa PSDa OUR IND UNI\"\r\nPragma: no-cache\r\nSet-Cookie: recs=0B3043171972ACD1; Max-Age=60; Expires=Mon, 25 Jan 2021 13:53:35 GMT; Path=/; Domain=outbrain.com;SameSite=None;Secure\r\nSet-Cookie: obuid=d7dd2f9d-2cd2-405d-9442-4a75aed2cfc1; Max-Age=7776000; Expires=Sun, 25 Apr 2021 13:52:35 GMT; Path=/; Domain=outbrain.com;SameSite=None;Secure\r\nTraffic-Path: NYDC1, LGA, CPH, Europe1\r\nVary: Accept-Encoding, User-Agent\r\nVia: 1.1 varnish, 1.1 varnish\r\nX-Cache: MISS, MISS\r\nX-Cache-Hits: 0, 0\r\nX-Served-By: cache-lga21948-LGA, cache-cph20621-CPH\r\nX-Timer: S1611582755.048516,VS0,VE123\r\nX-Traceid: 81cbfa61ab6aa6ef07be5fc838d167ff"
+      }
+    }
+  ]
+}
