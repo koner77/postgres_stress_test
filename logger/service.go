@@ -9,6 +9,7 @@ import (
 	"squid/postgres-stress-test/domain"
 	"strings"
 	"sync"
+	"time"
 
 	"github.com/google/uuid"
 )
@@ -16,6 +17,7 @@ import (
 // TrackerRepository tracker repository.
 type IncomingRepository interface {
 	Store(log domain.IncomingLog) (*uuid.UUID, error)
+	GetStats(testID string) (*time.Time, *time.Time, error)
 	FindAll() (*[]domain.IncomingLog, error)
 }
 
@@ -31,17 +33,30 @@ func NewService(in IncomingRepository) *Service {
 	}
 }
 
-func (s *Service) Store(ctx context.Context, testID string) error {
+func (s *Service) RunTest(ctx context.Context, testID string, rows int) (*time.Duration, error) {
 	data, err := readFile()
 	if err != nil {
-		return fmt.Errorf("coudln't read json file: %v", err)
+		return nil, fmt.Errorf("coudln't read json file: %v", err)
 	}
 
 	data.TestID = testID
 
+	err = s.store(data, rows)
+	if err != nil {
+		return nil, fmt.Errorf("error storing data: %v", err)
+	}
+
+	min, max, err := s.repo.GetStats(testID)
+	if err != nil {
+		return nil, fmt.Errorf("error to getStat: %v", err)
+	}
+	diff := max.Sub(*min)
+	return &diff, nil
+}
+
+func (s *Service) store(data *domain.IncomingLog, rows int) error {
 	var wg sync.WaitGroup
-	//fmt.Println(data)
-	for i := 1; i <= 10; i++ {
+	for i := 1; i <= rows; i++ {
 		data.RowNumber = i
 		wg.Add(1)
 		go func(log domain.IncomingLog, i int, wg *sync.WaitGroup) {
@@ -52,12 +67,23 @@ func (s *Service) Store(ctx context.Context, testID string) error {
 			}
 			fmt.Println(i, ": ", res)
 		}(*data, i, &wg)
-		//fmt.Println(1)
 	}
 	wg.Wait()
 
 	return nil
 }
+
+//
+//	min, max, err := s.repo.GetStats(testID)
+//	if err != nil {
+//		return fmt.Errorf("error to getStat: %v", err)
+//	}
+//
+//	fmt.Printf("min time: %v", min)
+//	fmt.Printf("max time: %v", max)
+//
+//	return nil
+//}
 
 func readFile() (*domain.IncomingLog, error) {
 	dir := "mock/"

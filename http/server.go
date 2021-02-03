@@ -6,12 +6,14 @@ import (
 	"fmt"
 	"net"
 	"net/http"
+	"strconv"
+	"time"
 
 	"github.com/gorilla/mux"
 )
 
 type loggerService interface {
-	Store(ctx context.Context, testID string) error
+	RunTest(ctx context.Context, testID string, rows int) (*time.Duration, error)
 }
 
 // Server will perform operations over http.
@@ -69,20 +71,23 @@ func (s *server) Handler() http.Handler {
 
 func (s *server) TestHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	w.WriteHeader(http.StatusOK)
 	id := vars["id"]
-
 	rows := r.FormValue("rows")
-
-	fmt.Fprintf(w, "got id: %v rows:%v\n", vars["id"], rows)
-
 	ctx := r.Context()
 
-	err := s.logger.Store(ctx, id)
+	fmt.Fprintf(w, "test id: %v\nrows: %v\n", vars["id"], rows)
+
+	rowsI, err := strconv.Atoi(rows)
 	if err != nil {
-		fmt.Fprintf(w, "something went wrong %v\n", err)
+		http.Error(w, err.Error(), http.StatusBadRequest)
 	}
-	w.Write([]byte("Done"))
+
+	diff, err := s.logger.RunTest(ctx, id, rowsI)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+	w.WriteHeader(http.StatusOK)
+	fmt.Fprintf(w, "Test done, time: %vms", diff.Milliseconds())
 }
 
 // NewServer returns a new instance of Server.

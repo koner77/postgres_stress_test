@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"squid/postgres-stress-test/domain"
 	"squid/postgres-stress-test/logger"
+	"time"
 
 	"github.com/google/uuid"
 )
@@ -53,6 +54,20 @@ func (r *incomingRepository) Store(log domain.IncomingLog) (*uuid.UUID, error) {
 	}
 	//fmt.Printf("%v: %v\n", i, id)
 	return &id, nil
+}
+
+func (r *incomingRepository) GetStats(testID string) (*time.Time, *time.Time, error) {
+	query := `
+	SELECT min(log_at), max(log_at) test_id
+	FROM public.incoming_logs
+	where test_id = $1;
+	`
+	result := r.db.QueryRow(query, testID)
+	var minTime, maxTime time.Time
+	if err := result.Scan(&minTime, &maxTime); err != nil {
+		return nil, nil, err
+	}
+	return &minTime, &maxTime, nil
 }
 
 func (r *incomingRepository) FindAll() (*[]domain.IncomingLog, error) {

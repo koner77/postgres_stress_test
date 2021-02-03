@@ -14,6 +14,7 @@ import (
 )
 
 var (
+	apiAddress       = ":8888"
 	postgresUser     = "postgres"
 	postgresPassword = ""
 	postgresHost     = "localhost"
@@ -48,8 +49,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	db.SetMaxOpenConns(5000)
-	db.SetMaxIdleConns(5000)
+	db.SetMaxOpenConns(800)
+	db.SetMaxIdleConns(750)
 
 	err = db.Ping()
 	if err != nil {
@@ -57,33 +58,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	//repository := logRepository{
-	//	db,
-	//}
-
-	/*items, err := repository.getLogs()
-	if err != nil {
-		fmt.Sprintf("couldn't get data %v", err)
-	}
-
-	for _, log := range *items {
-		fmt.Println(log)
-	}*/
-
-	/**/
-
 	incomingRepo := postgres.NewIncomingRepository(db)
-
 	logService := logger.NewService(incomingRepo)
 
 	errorChannel := make(chan error)
 
 	go func() {
-		httpServer := http.NewServer(
-			"localhost:8080",
-			db,
-			logService,
-		)
+		httpServer := http.NewServer(apiAddress, db, logService)
 		errorChannel <- httpServer.Open()
 	}()
 	// Capture interrupts.
